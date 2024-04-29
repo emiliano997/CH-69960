@@ -6,7 +6,7 @@ const esPar = NaN || "No es par";
 
 let operacion = null;
 
-const resultado = NaN ?? "Otro valor";
+const resultado = 0 ?? "Otro valor";
 
 console.log(esPar);
 console.log(resultado);
