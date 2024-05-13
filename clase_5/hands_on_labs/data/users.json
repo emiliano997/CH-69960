@@ -16,41 +16,5 @@
 		"apellido": "Rossi",
 		"edad": "Data Science",
 		"curso": 18
-	},
-	{
-		"nombre": "Leonardo",
-		"apellido": "Valdez",
-		"edad": "Programación Backend",
-		"curso": 25
-	},
-	{
-		"nombre": "Martin",
-		"apellido": "Kutzner",
-		"edad": "Progrmaación Frontend",
-		"curso": 21
-	},
-	{
-		"nombre": "Federico",
-		"apellido": "Rossi",
-		"edad": "Data Science",
-		"curso": 18
-	},
-	{
-		"nombre": "Leonardo",
-		"apellido": "Valdez",
-		"edad": "Programación Backend",
-		"curso": 25
-	},
-	{
-		"nombre": "Martin",
-		"apellido": "Kutzner",
-		"edad": "Progrmaación Frontend",
-		"curso": 21
-	},
-	{
-		"nombre": "Federico",
-		"apellido": "Rossi",
-		"edad": "Data Science",
-		"curso": 18
 	}
 ]
