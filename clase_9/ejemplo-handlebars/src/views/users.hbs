@@ -1,0 +1,11 @@
+<div>
+  <h1>Usuarios registrados</h1>
+
+  <ul>
+  {{#each users}}
+    <li>
+      {{this.nombre}} {{this.apellido}} - {{this.correo}}
+    </li>
+  {{/each}}
+  </ul> 
+</div>
