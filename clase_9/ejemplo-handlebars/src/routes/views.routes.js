@@ -72,6 +72,39 @@ router.get("/users", (req, res) => {
   res.render("users", { users, style: "/style.css" });
 });
 
+// Desafio 2
+router.get("/register", (req, res) => {
+  res.render("register");
+});
+
+// Esto habria que separarlo a un router de users
+router.post("/users", (req, res) => {
+  const { nombre, correo, password } = req.body;
+
+  if (!nombre || !correo || !password)
+    return res.status(400).json({ error: "Falta datos" });
+
+  const user = users.find((user) => user.correo === correo);
+
+  if (user) return res.status(400).json({ error: "El correo ya existe" });
+
+  users.push({
+    nombre,
+    correo,
+    password,
+  });
+
+  res.status(201).json({
+    message: "Usuario creado correctamente",
+    user: {
+      nombre,
+      correo,
+      password,
+    },
+  });
+});
+
+// Desafio 1
 router.get("/desafio", (req, res) => {
   const users = [
     {
