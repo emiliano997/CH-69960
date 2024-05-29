@@ -34,6 +34,9 @@ const httpServer = app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
 
+// Mensajes
+const mensajes = [];
+
 // Socket.io configuration
 const io = new Server(httpServer);
 
@@ -41,17 +44,31 @@ io.on("connection", (socket) => {
   console.log("Nuevo cliente conectado", socket.id);
 
   // Esperamos al evento "message" enviado por el cliente
-  socket.on("message", (data) => {
-    console.log(data);
-  });
+  // socket.on("message", (data) => {
+  //   console.log(data);
+  // });
 
   // Mensajes del lado del servidor
-  socket.emit("serverMessage", "Hola, soy el servidor"); // Envía al cliente conectado
+  // socket.emit("serverMessage", "Hola, soy el servidor"); // Envía al cliente conectado
 
-  socket.broadcast.emit(
-    "serverMessage2",
-    `Hola a todos menos a este socket ${socket.id}`
-  ); // Envía a todos los clientes excepto al cliente desde el cual se envia el mensaje
+  // socket.broadcast.emit(
+  //   "serverMessage2",
+  //   `Hola a todos menos a este socket ${socket.id}`
+  // ); // Envía a todos los clientes excepto al cliente desde el cual se envia el mensaje
 
-  io.emit("serverMessage3", "Hola a todos"); // Envía a todos los clientes
+  // io.emit("serverMessage3", "Hola a todos"); // Envía a todos los clientes
+
+  // Desafio
+  socket.on("message", (data) => {
+    console.log(data);
+
+    mensajes.push({
+      socketid: socket.id,
+      mensaje: data,
+    });
+
+    io.emit("mensajes", mensajes);
+  });
+
+  io.emit("mensajes", mensajes);
 });
