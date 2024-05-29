@@ -2,6 +2,7 @@ import express from "express";
 import path from "path";
 import __dirname from "./dirname.js";
 import handlebars from "express-handlebars";
+import viewsRoutes from "./routes/views.routes.js";
 
 const app = express();
 
@@ -24,6 +25,9 @@ app.engine(
 
 app.set("view engine", "hbs");
 app.set("views", `${__dirname}/views`);
+
+// Routes
+app.use("/", viewsRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
