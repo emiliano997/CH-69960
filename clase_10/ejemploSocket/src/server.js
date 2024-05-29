@@ -3,6 +3,7 @@ import path from "path";
 import __dirname from "./dirname.js";
 import handlebars from "express-handlebars";
 import viewsRoutes from "./routes/views.routes.js";
+import { Server } from "socket.io";
 
 const app = express();
 
@@ -29,6 +30,10 @@ app.set("views", `${__dirname}/views`);
 // Routes
 app.use("/", viewsRoutes);
 
-app.listen(PORT, () => {
+const httpServer = app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+// Socket.io configuration
+
+const io = new Server(httpServer);
