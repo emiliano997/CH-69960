@@ -60,7 +60,7 @@ io.on("connection", (socket) => {
 
   // Desafio
   socket.on("message", (data) => {
-    console.log(data);
+    // console.log(data);
 
     mensajes.push({
       socketid: socket.id,
