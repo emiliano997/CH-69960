@@ -1,0 +1,29 @@
+[
+	{
+		"id": 1,
+		"title": "Product 1 Updated",
+		"description": "Description 1",
+		"price": 100,
+		"thumbnail": "image 1",
+		"code": "0001A",
+		"stock": 10
+	},
+	{
+		"id": 2,
+		"title": "Product 2",
+		"description": "Description 2",
+		"price": 200,
+		"thumbnail": "image 2",
+		"code": "0002B",
+		"stock": 20
+	},
+	{
+		"id": 4,
+		"title": "Product 4",
+		"description": "Description 4",
+		"price": 400,
+		"thumbnail": "image 4",
+		"code": "0004D",
+		"stock": 40
+	}
+]
