@@ -29,21 +29,27 @@ io.on("connection", (socket) => {
   //   socket.disconnect();
   // }
 
-  console.log("Nuevo cliente conectado:", socket.id);
+  console.log("Nuevo cliente conectado:", socket.id, "Algo más");
 
   // Manejamos los mensajes que recibimos
   socket.on("message", (data) => {
     messages.push(data);
-    io.emit("messages", data);
+    io.emit("messages", messages);
   });
 
   // Manejamos cuando un cliente inicia sesión
   socket.on("inicio", (data) => {
+    // const userExists = messages.find((message) => message.user === data);
+
+    // if (userExists) {
+    //   socket.disconnect();
+    // }
+
     io.emit("inicio", data);
     socket.broadcast.emit("connected", data);
   });
 
-  socket.emit("messages", messages);
+  // socket.emit("messages", messages);
 
   socket.on("disconnect", () => {
     console.log("Cliente desconectado:", socket.id);

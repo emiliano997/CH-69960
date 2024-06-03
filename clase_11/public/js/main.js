@@ -42,3 +42,16 @@ socket.on("connected", (data) => {
     });
   }
 });
+
+// Mostramos los mensajes recibidos
+socket.on("messages", (data) => {
+  console.log("Mensajes recibidos:", data);
+  const messages = document.getElementById("messages");
+  let content = "";
+
+  data.forEach((message) => {
+    content += `<p>${message.user}: ${message.message}</p>`;
+  });
+
+  messages.innerHTML = content;
+});
