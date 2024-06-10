@@ -1,7 +1,7 @@
 > use filtros
 
 Common filters
-> db.estudiantes.find({ $and: [ { curso: "Frontend" }, { edad: { $gte: 30 } }  ] }) 
+> db.estudiantes.find({ $and: [ { curso: "Frontend" }, { edad: { $gte: 30 } }  ] })
 
 > db.estudiantes.find({ $or: [ { curso: "Fullstack" }, { edad: { $eq: 30 } } ] })
 
@@ -42,6 +42,8 @@ Others queries
 Esta expresion regular busca un nombre que contenga una a minuscula
 > db.estudiantes.find({ nombre: /.*a.*/ }) 
 
+> db.estudiantes.find({ curso: /^back*/i })
+
 Proyecciones
 > db.estudiantes.find({ curso: "Fullstack"  }, { nombre: 1, apellido: 1, correo: 1, _id: 0 })
 
@@ -54,7 +56,7 @@ Siempre ordena por el primer campo que le pasemos
 
 > db.estudiantes.find({}, { nombre: 1, apellido: 1, correo: 1, _id: 0, edad: 1 }).skip(0).limit(2)
 
-> db.estudiantes.find({}, { nombre: 1, apellido: 1, correo: 1, _id: 0, edad: 1 }).skip(1).limit(2)
+> db.estudiantes.find({}, { nombre: 1, apellido: 1, correo: 1, _id: 0, edad: 1 }).skip(2).limit(2)
 
 Agregamos un alumno solo con nombre
 > db.estudiantes.insertOne({ nombre: "Felipe" })
