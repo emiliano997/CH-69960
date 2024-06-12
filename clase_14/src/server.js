@@ -10,12 +10,15 @@ const dbName = "ch69960";
 
 const app = express();
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 const PORT = 5000;
 
 mongoose
   .connect(
     // `mongodb://localhost:27017/${dbName}`, -> Conexión local
-    `mongodb+srv://${user}:${password}@curso-nodejs.de1bv.gcp.mongodb.net/${dbName}?retryWrites=true&w=majority&appName=curso-nodejs`
+    `...`
   )
   .then(() => {
     console.log("DB Connected");
@@ -24,7 +27,7 @@ mongoose
     console.log(error);
   });
 
-app.use("/users", userRoutes);
+app.use("/api/users", userRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
