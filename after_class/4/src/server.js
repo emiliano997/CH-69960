@@ -38,6 +38,8 @@ const server = app.listen(PORT, () => {
 // Socket.io configuration
 export const io = new Server(server);
 
+// socket: Cliente conectado
+// io: Servidor de WebSocket
 io.on("connection", (socket) => {
   console.log("Nuevo cliente conectado", socket.id);
 
