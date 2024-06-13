@@ -1,0 +1,21 @@
+<h1>
+  Vista Principal
+</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Titulo</th>
+      <th>Precio</th> 
+    </tr>
+  </thead>
+  <tbody>
+    {{#each products}}
+      <tr>
+        <td>{{this.id}}</td>
+        <td>{{this.title}}</td>
+        <td>{{this.price}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
