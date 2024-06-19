@@ -10,15 +10,15 @@
 ## Tareas a realizar
 
 - [ x ] Crear la estructura de carpetas e instalar las dependencias
-- [ ] Crear el esquema de las tareas para la base de datos
-- [ ] Crear una aplicación web con Node.js y Express.js
-- [ ] Crear la API REST para la aplicación
-  - [ ] GET /tasks
-  - [ ] GET /tasks/:id
-  - [ ] POST /tasks
-  - [ ] PUT /tasks/:id
-  - [ ] DELETE /tasks/:id
-- [ ] Crear las vistas de la aplicación para mostrar los datos de la base de datos
+- [ x ] Crear el esquema de las tareas para la base de datos
+- [ x] Crear una aplicación web con Node.js y Express.js
+- [ x ] Crear la API REST para la aplicación
+  - [ x ] GET /tasks
+  - [ x ] GET /tasks/:id
+  - [ x ] POST /tasks
+  - [ x ] PUT /tasks/:id
+  - [ x ] DELETE /tasks/:id
+- [ x ] Crear las vistas de la aplicación para mostrar los datos de la base de datos
 
 ## Estrucutra de carpetas
 
