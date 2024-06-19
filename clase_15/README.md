@@ -9,8 +9,9 @@
 
 ## Tareas a realizar
 
-- [ ] Crear una aplicación web con Node.js y Express.js
+- [ x ] Crear la estructura de carpetas e instalar las dependencias
 - [ ] Crear el esquema de las tareas para la base de datos
+- [ ] Crear una aplicación web con Node.js y Express.js
 - [ ] Crear la API REST para la aplicación
   - [ ] GET /tasks
   - [ ] GET /tasks/:id
