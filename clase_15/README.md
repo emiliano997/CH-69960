@@ -33,9 +33,9 @@
 │   ├── server.js o app.js
 |   ├── dirname.js
 │   ├── models
-│   │   ├── task.js
+│   │   ├── task.model.js (Esquema de Mongoose)
 │   ├── routes
-│   │   ├── tasks.js
+│   │   ├── tasks.routes.js
 │   └── views
 │       ├── layouts
 │       │   └── main.hbs
