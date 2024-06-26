@@ -8,6 +8,7 @@ router.get("/", async (req, res) => {
 
   try {
     const students = await studentModel.paginate({}, { limit, page });
+    // console.log(students);
     res.render("students", { students });
   } catch (error) {
     res.status(500).json({ error });
